@@ -15,3 +15,7 @@
 来源是 [USB-HID 归档标签 `usb-hid-archive-20261012`](https://github.com/f1rstzi0n/USB-HID/tree/usb-hid-archive-20261012)，保留通信原型与源板历史证据；后续代码在 APP / Boot 两仓库开发。本仓库不包含签名发布工具，现有离线 CNG 打包与首装工具说明位于[归档发布工具](https://github.com/f1rstzi0n/USB-HID/blob/usb-hid-archive-20261012/tools/firmware/README.md)。源板历史实测不替代本目标验收。
 
 来源归档提交：[3e3431e8dc19ff9b2ef52c7b1172894fe702392d](https://github.com/f1rstzi0n/USB-HID/commit/3e3431e8dc19ff9b2ef52c7b1172894fe702392d)。
+
+命令行工程脚本要求 PowerShell 7（`pwsh`）。
+
+[独立克隆发布验证](docs/validation/REPOSITORY-PUBLICATION-20261012.md)记录 clean build、回归和运行环境。

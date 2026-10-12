@@ -1,0 +1,28 @@
+[
+  {
+    "project": "Test446-Boot",
+    "config": "Debug",
+    "flash_bytes": 42196,
+    "data_bytes": 140,
+    "bss_bytes": 32892,
+    "static_ram_bytes": 33032,
+    "linker_heap_stack_bytes": 3076,
+    "ram_after_static_and_reserve": 94956,
+    "vector": "0x8000000",
+    "mailbox": "0x2001fff8",
+    "initial_msp": "0x2001fff8"
+  },
+  {
+    "project": "Test446-Boot",
+    "config": "Release",
+    "flash_bytes": 42196,
+    "data_bytes": 140,
+    "bss_bytes": 32892,
+    "static_ram_bytes": 33032,
+    "linker_heap_stack_bytes": 3076,
+    "ram_after_static_and_reserve": 94956,
+    "vector": "0x8000000",
+    "mailbox": "0x2001fff8",
+    "initial_msp": "0x2001fff8"
+  }
+]

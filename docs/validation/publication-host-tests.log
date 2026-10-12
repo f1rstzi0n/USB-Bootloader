@@ -1,0 +1,14 @@
+Native Boot host regression
+
+COMMAND: D:/Software/StrawberryPerl/c/bin/ctest.exe --test-dir build-host --output-on-failure
+Internal ctest changing into directory: C:/Users/17907/AppData/Local/Temp/usb-repo-publication-20261012/clones/Test446-Boot/build-host
+Test project C:/Users/17907/AppData/Local/Temp/usb-repo-publication-20261012/clones/Test446-Boot/build-host
+    Start 1: boot_update
+1/2 Test #1: boot_update ......................   Passed    1.39 sec
+    Start 2: boot_usb
+2/2 Test #2: boot_usb .........................   Passed    0.02 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   1.42 sec
+RESULT: PASS

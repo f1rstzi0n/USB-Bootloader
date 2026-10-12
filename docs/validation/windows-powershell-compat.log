@@ -1,0 +1,43 @@
+Boot independent clone verification
+HEAD 7ae8520e0bde5403d4a162d5489624373cd4a670
+PATH prepended: D:\Software\StrawberryPerl\c\bin
+
+COMMAND: powershell -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/verify_generated.ps1
+At C:\Users\17907\AppData\Local\Temp\usb-repo-publication-20261012\clones\Test446-Boot\tools\cubeide\verify_generated.p
+s1:13 char:147
++ ... *RCC_PLLSOURCE_HSE' -and $main -match 'PLLN\s*=\s*180;') 'HSE bypass  ...
++                                                               ~~~
+Unexpected token 'HSE' in expression or statement.
+At C:\Users\17907\AppData\Local\Temp\usb-repo-publication-20261012\clones\Test446-Boot\tools\cubeide\verify_generated.p
+s1:19 char:96
++ ... oid\s+OTG_FS_IRQHandler\s*\(void\)\s*\{').Count -eq 1) '浠呬竴涓?USB ISR'
++                                                             ~~~~~~~~
+Unexpected token '浠呬竴涓?USB' in expression or statement.
+At C:\Users\17907\AppData\Local\Temp\usb-repo-publication-20261012\clones\Test446-Boot\tools\cubeide\verify_generated.p
+s1:19 char:78
++ ... :Matches($board+$it,'void\s+OTG_FS_IRQHandler\s*\(void\)\s*\{').Count ...
++                                                                 ~
+Missing closing '}' in statement block or type definition.
+At C:\Users\17907\AppData\Local\Temp\usb-repo-publication-20261012\clones\Test446-Boot\tools\cubeide\verify_generated.p
+s1:23 char:51
++  $defines=@($config.SelectNodes('.//tool[contains(@superClass,"tool.c ...
++                                                   ~~~~~~~~~~~
+The splatting operator '@' cannot be used to reference variables in an expression. '@superClass' can be used only as an
+ argument to a command. To reference variables in an expression use '$superClass'.
+At C:\Users\17907\AppData\Local\Temp\usb-repo-publication-20261012\clones\Test446-Boot\tools\cubeide\verify_generated.p
+s1:30 char:55
++ ... quire ($config.SelectSingleNode('.//tool[contains(@superClass,"tool.c ...
++                                                       ~~~~~~~~~~~
+The splatting operator '@' cannot be used to reference variables in an expression. '@superClass' can be used only as an
+ argument to a command. To reference variables in an expression use '$superClass'.
+At C:\Users\17907\AppData\Local\Temp\usb-repo-publication-20261012\clones\Test446-Boot\tools\cubeide\verify_generated.p
+s1:30 char:103
++ ... s(@superClass,"tool.c.compiler")]/option[contains(@superClass,"optimi ...
++                                                       ~~~~~~~~~~~
+The splatting operator '@' cannot be used to reference variables in an expression. '@superClass' can be used only as an
+ argument to a command. To reference variables in an expression use '$superClass'.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+ 
+RESULT: FAIL Command exit 1: powershell -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/verify_generated.ps1
+

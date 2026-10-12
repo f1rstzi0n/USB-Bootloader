@@ -31,17 +31,19 @@
 
 唯一固件构建定义是本工程 `.project` / `.cproject` / `.settings`；使用 `tools/cubeide`，不维护第二套固件编译清单。CubeMX 再生成后，在工程根目录依次恢复并核验配置、编码和共享副本：
 
+工程脚本使用 PowerShell 7（`pwsh`）；Windows PowerShell 5.1 无法解析部分 UTF-8 无 BOM 脚本。
+
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/apply_sources.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/verify_generated.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/verify_owned_c.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/apply_sources.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/verify_generated.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/verify_owned_c.ps1
 node tools/cubeide/verify_shared.js
 ```
 
 源码或生成配置变更完成后执行 Debug / Release clean build（两配置均 `-Os`），核验布局并运行 Boot 主机回归：
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/build.ps1 -Config All
+pwsh -NoProfile -ExecutionPolicy Bypass -File tools/cubeide/build.ps1 -Config All
 node tools/cubeide/verify_builds.js
 cmake -S tests/host -B build-host -G Ninja -DCMAKE_C_COMPILER=gcc
 cmake --build build-host
